@@ -1,0 +1,43 @@
+Komfortkasse PHP Example for "Generic" (API) Access v2
+
+You need:
+- a webserver with PHP
+- a valid Komfortkasse login
+- the API Key and Accesscode of your Komfortkasse dealer account
+
+You don't need:
+- mysql (or any other database)
+
+
+Instructions:
+=============
+
+1.
+Copy these files to a folder of your webserver. The webserver must be reachable
+from the internet if you want to test full functionality.
+
+2.
+Enter your API Key in the file komfortkasse_settings.php
+
+3.
+Open komfortkasse_send.php in a browser: this will send an example order to 
+your Komfortkasse account. (Every newly generated order number will be stored 
+in the file order_numbers.txt.)
+Warning! this will be a "real" order, but you can mark this order as cancelled 
+later on. Please contact support if you want to permanently delete those 
+example orders.
+
+4. 
+Open komfortkasse_read.php in a browser: this will read all orders (you should
+see the one that you just created).
+
+5.
+Mark one of the orders as paid in your Komfortkasse Dealer Area (select 
+"orders" in the main menu, select an order, then click "Mark as paid"). 
+
+6. 
+Open komfortkasse_read.php again: you should see the new order status
+("PAID").
+
+If all the above steps are working, the PHP test environment for Komfortkasse
+works. You can now start to integrate this logic to your real system.
